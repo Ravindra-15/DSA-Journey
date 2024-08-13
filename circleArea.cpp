@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
-float getArea(float radious){
-    float result = 3.14*radious*radious;
+float getArea(float radius){
+    float result = 3.14*radius*radius;
     return result;
 }
 int main() {
-    float radious;
-    cout << "Enter The Radious of Circle :";
-    cin >> radious;
-    float area = getArea(radious);
+    float radius;
+    cout << "Enter The Radius of Circle :";
+    cin >> radius;
+    float area = getArea(radius);
     cout << "The Area of Circle is :" << area;
     return 0;
 }
