@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int firstOccurrence(vector<int> arr, int target)
+int lastOccurrence(vector<int> arr, int target)
 {
     int start = 0;
     int end = arr.size() - 1;
@@ -13,7 +13,7 @@ int firstOccurrence(vector<int> arr, int target)
         if (arr[mid] == target)   // If target is found
         {
             ans = mid;  // Update answer with current mid index
-            end = mid - 1;  // Move end to mid - 1 to search for earlier occurrences
+            start = mid + 1;  // Move start to mid + 1 to search for last occurrences
         }
         else if (arr[mid] < target)
         {
@@ -25,22 +25,22 @@ int firstOccurrence(vector<int> arr, int target)
         }
         mid = start + (end - start) / 2;   // Recalculate mid for the next iteration
     }
-    return ans;   // Return the index of the first occurrence or -1 if not found
+    return ans;   // Return the index of the last occurrence or -1 if not found
 }
 
 int main()
 {
-    vector<int> arr{1, 2, 2, 4, 4, 4, 5, 5, 6, 8, 8};   // Sorted array of integers
-    int target = 4;   // Target value to find
+    vector<int> arr{2, 3, 4, 7, 7, 7, 8, 8, 12, 12, 13};   // Sorted array of integers
+    int target = 7;   // Target value to find
   
-    int ans = firstOccurrence(arr, target);
+    int ans = lastOccurrence(arr, target);
     if (ans == -1)   // Check if the target was not found
     {
         cout << "No such element exists in vector array.";
     }
     else
     {
-        cout << "First Occurruence of number is at index: " << ans;
+        cout << "Last Occurrence of the  number is at index: " << ans;
     }
     return 0;
 }
