@@ -14,12 +14,12 @@ int findTarget(vector<int> arr, int target)
             return mid;
         } 
         // Check if the element just before mid is the target (if it exists)
-        else if (mid - 1 >= 0 && arr[mid - 1] == target)
+        else if (mid - 1 >= start && arr[mid - 1] == target)
         {
             return mid - 1;
         }
         // Check if the element just after mid is the target (if it exists)
-        else if (mid + 1 <= arr.size() && arr[mid + 1] == target)
+        else if (mid + 1 <= end && arr[mid + 1] == target)
         {
             return mid + 1;
         }
