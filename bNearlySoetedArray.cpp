@@ -29,7 +29,7 @@ int findTarget(vector<int> arr, int target)
         }
         else
         {
-            end = mid - 1;
+            end = mid - 2;
         }
         mid = start + (end - start) / 2;
     }
