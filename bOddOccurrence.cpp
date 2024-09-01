@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int solve(vector<int> arr){
@@ -38,7 +37,6 @@ int solve(vector<int> arr){
   }
   return -1;
 } 
-
 int main() {
     vector<int> arr{1,1,2,2,3,3,4,4,5,5,9,3,3,7,7};
     int ans = solve(arr);
