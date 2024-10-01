@@ -22,7 +22,7 @@ bool canBePalindrome(string str) {
         if (str[start] != str[end]) {
             // Check if removing the character at 'start' or 'end' makes it a palindrome
             return isPalindrome(str, start + 1, end) || isPalindrome(str, start, end - 1);
-        }
+        } 
         start++;
         end--;
     }
