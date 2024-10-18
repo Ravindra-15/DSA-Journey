@@ -34,7 +34,7 @@ int binarySearch(vector<int> arr, int s, int e, int target) {
 
 int main() {
     vector<int> arr{10, 20, 30, 40, 50};  
-    int target = 40;  // Element to find
+    int target = 30;  // Element to find
     int n = arr.size();  // Size of the array
     int s = 0;  // Start index
     int e = n - 1;  // End index
