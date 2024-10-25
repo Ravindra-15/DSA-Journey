@@ -6,7 +6,7 @@ void solve(string& name, int start, int end){
         return;
     }
 
-    swap(name[start], name[end]);
+    swap(name[start], name[end]); 
     solve(name, start + 1 , end - 1);
 }
 int main() {
